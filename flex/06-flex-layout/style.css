@@ -5,6 +5,8 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,8 +18,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
-  gap: 50px;
-  padding: 7px;
+  padding: 8px 16px;
 }
 
 input {
@@ -28,61 +29,40 @@ input {
   margin-bottom: 16px;
 }
 
-a, ul {
-  text-decoration: none;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 16px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  align-items: center;
-  padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.header a{
-  color: rgb(77, 77, 77);
-}
-.big-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-} 
-
-.footer a {
-  color: rgb(49, 49, 49);
-}
-.buttons {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+.header, .footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  background: #eee;
   display: flex;
-  background-color: #eee;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px;
+}
+
+ul {
+  display: flex;
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
